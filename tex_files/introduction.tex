@@ -29,10 +29,25 @@ Fuzzy logic is not fuzzy.
 Basically, fuzzy logic is a precise logic of imprecision and approximate reasoning.
 
 In real world, we do not assign precise parameters or criteria to most objects that we encounter on every day basis.
-For instance we would not describe a rock lying on a side of the road being 4.23m in diameter.
-Normally we would call it just big or huge or some other \emph{linguistic expression} that we would find suitable.
-That is something that we people use in our everyday lives and do now acknowledge it.
-Computers have hard time describing 
+
+\begin{wrapfigure}{r}{0.6\textwidth}
+	\captionsetup{width=18pc}
+	\vspace*{-2em}
+	\hspace*{1.5em}
+	\includegraphics[width=0.5\textwidth]{images/old_graph.png}
+	%[height=0.4\textheight,keepaspectratio]
+	\caption{Usage of linguistic variable while describing someone's age~\cite{lecture_rome_university}}
+	\label{fig:old_graph}
+	\vspace*{-2em}
+\end{wrapfigure}
+
+For instance describing someone's age one can say that a person being 50 years old is \emph{old} but someone else may consider that person as \emph{middle-aged}.
+This is what we call fuzzy logic \emph{linguistic variable}.
+In Figure~\ref{fig:old_graph} one can see that to each linguistic variable a \emph{membership function} is assigned with yields for each age it's membership rate from 0 to 1.
+People do not acknowledge that in everyday usage, they just use it and take it for granted.
+Computers have hard time describing those type of traits in a descriptive manner as was shown with age example.
+
+That's where fuzzy logic comes in hand.
 Although fuzzy logic has been studied since 1920s (as study of infinite-valued logic), the term ``fuzzy sets'' has been coined by Lofti A. Zadeh, a professor at the University of California at Berkley in his article ``Fuzzy sets'' in 1965 \cite{fuzzy_sets_zadeh} as a mean to model the uncertainty
 of natural language.
 He was trying to argument for his idea saying that people do not require precise, numerical information input, and yet they are capable of highly adaptive control and if one had been able to program a system to accept noisy, imprecise input it would have been much more effective than contemporary systems.
@@ -46,6 +61,7 @@ Fuzzy systems:
 \item Fuzzy systems can control nonlinear systems that would be difficult or impossible to model mathematically. This opens doors for control systems that would normally be deemed unfeasible for automation.
 \end{itemize}
 
+\clearpage
 \subsection{Artificial Neural Networks}
 Having nowadays ``traditional'' computer systems we can use it efficiently to some extent in various scenarios and for various purposes, e.g. multimedia systems, video games, document editing, algebra or arithemics.
 
@@ -62,7 +78,7 @@ Having nowadays ``traditional'' computer systems we can use it efficiently to so
 	    \multicolumn{1}{|c|}{-} & adapting to tolerances \\ \hline
 	    \multicolumn{1}{|c|}{-} & adapting to changing curcumstances\\ \hline
     \end{tabular}
-    \caption{Traits of everyday, traditional computer systems.}
+    \caption{Traits of everyday, traditional computer systems.~\cite{intro_ann_leslie_smith}}
     \label{tab:everyday_computer_systems}
 \end{table}Artificial neural networks are computational models inspired by human's brain, that are capable of machine learning and pattern recognition.
 
@@ -73,10 +89,10 @@ That's were artificial neural networks come to place.
 Artificial neural networks are usually presented as systems of interconnected ``neurons'' (just like human brain's neurons, hence the name), that can compute values from inputs by feeding information through the network.
 
 
-\begin{wrapfigure}{r}{0.45\textwidth}
-	\vspace*{-2em}
+\begin{wrapfigure}{r}{0.48\textwidth}
+	\vspace*{-2.5em}
 	\hspace*{1em}
-	\includegraphics[width=0.43\textwidth]{images/ann_wiki_model.pdf}
+	\includegraphics[width=0.44\textwidth]{images/ann_wiki_model.pdf}
 	%[height=0.4\textheight,keepaspectratio]
 	\caption{Artificial neural network model showing its free layers: inputs, hidden layer and output layer.~\cite{wiki_ann}}
 	\label{fig:ann_model}
@@ -88,6 +104,4 @@ As computers become more powerful, artificial neural networks are gradually taki
 They are already at the heart of a new generation of speech recognition devices and they are beginning to outperform earlier systems for recognizing objects in images.
 
 \vspace*{5em}
-
-
 
