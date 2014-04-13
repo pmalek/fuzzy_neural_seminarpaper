@@ -1,0 +1,21 @@
+Similar to the way the fuzzy neuron and the neo-fuzzy neuron were created, different types of fuzzy neural networks (FNNs) have been developed and applied to different tasks.
+A fuzzy neural network is a connectionist model for fuzzy rules implementation and inference. There is a great variety of architectures and functionalities of FNN.
+The FNNs developed so far differ mainly in the following parameters:
+\begin{itemize}
+\item Type of fuzzy rules implemented; this affects the connection structure used,
+\item Type of inference method implemented; this affects the selection of different neural network parameters and neuronal functions, such as summation, activation, and output function. It also influences the way the connection weights are initialized before training, and interpreted after training,
+\item Mode of operation: we consider here three major modes of operation by:
+	\begin{enumerate}
+	\item Fixed mode, fixed membership functions-fixed set of rules, that is, a fixed set of rules is inserted in a network, the network performs inference, but does not change its weights,
+	\item Learning mode, that is, a neural network is structurally defined to capture knowledge in a certain format, for example, some type of fuzzy rules. The network architecture is randomly initialized and trained with a set of data. Rules are then extracted from the structured network. The rules can be interpreted either in the same network structure or by using other inference methods.
+	\item Adaptation mode. A neural network is structurally set according to a set of existing rules, ``hints,'' heuristics. The network is then trained with new data and updated rules are extracted from its structure.
+	\end{enumerate}
+\end{itemize}
+
+Two cases can be distinguished here: (1) fixed membership functions—adaptable rules and (2)
+adaptable membership functions—adaptable rules.
+To summarize the above, FNNs have two major aspects:
+\begin{enumerate}
+\item Structural. A set of rules is used to define the initial structure of a neural network; two types of neural networks have been mainly used so far: (a) multilayer perceptrons (MLPs), and (b) radial-basisfunctions networks.
+\item Functional, parametric. After having defined the structure of a neural network and possibly having trained it with data, some parameters can be observed that would explain the inference which the network performs. Those parameters can be used to derive a (fuzzy) rule-based system represented in linguistic terms.
+\end{enumerate}

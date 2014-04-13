@@ -43,7 +43,9 @@ In real world, we do not assign precise parameters or criteria to most objects t
 
 For instance describing someone's age one can say that a person being 50 years old is \emph{old} but someone else may consider that person as \emph{middle-aged}.
 This is what we call fuzzy logic \emph{linguistic variable}.
-In Figure~\ref{fig:old_graph} one can see that to each linguistic variable a \emph{membership function} is assigned with yields for each age it's membership rate from 0 to 1.
+In Figure~\ref{fig:old_graph} one can see that to each linguistic variable a \emph{membership function} is assigned which yields for each age it's membership rate from 0 to 1, often denoted as $\mu$.
+This is mathemitacally denoted as: $$ \mu_A : X \rightarrow [0,1] $$
+Where $\mu_A(x)$ is interpreted as degree of membership of element $x$ in fuzzy set A for each $x \in X$.
 People do not acknowledge that in everyday usage, they just use it and take it for granted.
 Computers have hard time describing those type of traits in a descriptive manner as was shown with age example.
 
@@ -64,6 +66,7 @@ Fuzzy systems:
 \clearpage
 \subsection{Artificial Neural Networks}
 Having nowadays ``traditional'' computer systems we can use it efficiently to some extent in various scenarios and for various purposes, e.g. multimedia systems, video games, document editing, algebra or arithemics.
+Tasks in which those systems perform the best and the worst have been listed in Table~\ref{tab:everyday_computer_systems}.
 
 \begin{table}[h]
 \centering
@@ -80,26 +83,38 @@ Having nowadays ``traditional'' computer systems we can use it efficiently to so
     \end{tabular}
     \caption{Traits of everyday, traditional computer systems.~\cite{intro_ann_leslie_smith}}
     \label{tab:everyday_computer_systems}
-\end{table}Artificial neural networks are computational models inspired by human's brain, that are capable of machine learning and pattern recognition.
+\end{table}
 
 When some more abstract human like processing comes to play like defining a structure/model based on a concrete data set, prediction based on an example set then traditional computers start to pant.
 That's were artificial neural networks come to place.
 
+Artificial neural networks (ANN) are computational models inspired by human's brain, that are capable of machine learning and pattern recognition. 
+They are usually presented as systems of interconnected ``artificial neurons'' (just like human brain's neurons, hence the name), that can compute values from inputs by feeding information through the network.
+Figure~\ref{fig:ann_model} shows basic model of ANN with three layers: input neurons layers, hidden and output neurons layer.
+First mathematical model of such an artificial neuron was proposed by McCulloch and Pitts in 1943~\cite{mcculloh_pitts}.
 
-Artificial neural networks are usually presented as systems of interconnected ``neurons'' (just like human brain's neurons, hence the name), that can compute values from inputs by feeding information through the network.
+In general, a model of an artificial neuron is based on the following parameters which describe it:
 
+\begin{itemize}
+\item Input connections (or inputs): $x_1, x_2, \dots, x_n$ together with weights bound to them: $w_1, w_2, \dots, w_n$; one input to the neuron, called a bias, has a constant value of 1 and is usually represented as a separate input, say $x_0$ , but for simplicity it is treated here just as an input, clamped to a constant value,
+\item Input function $f$, calculates the aggregated net input signal to the neuron $u = f(x, w)$, where $x$ and $w$ are the input and weight vectors correspondingly; $f$ is usually the summation function: $u = \sum_{i=1}^n x_i \cdot w_i$,
+\item An activation (signal) function $s$ calculates the activation level of the neuron $a = s(u)$; mostly sigmoid actication function is used,
+\item An output function calculates the output signal value emitted through the output (the axon) of the neuron: $o = g(a)$; the output signal is usually assumed to be equal to the activation level of the neuron, that is, $o = a$.
+\end{itemize}
 
+\clearpage
 \begin{wrapfigure}{r}{0.48\textwidth}
-	\vspace*{-2.5em}
+	\vspace*{-1em}
 	\hspace*{1em}
-	\includegraphics[width=0.44\textwidth]{images/ann_wiki_model.pdf}
+	\includegraphics[width=0.4\textwidth]{images/ann_wiki_model.pdf}
 	%[height=0.4\textheight,keepaspectratio]
 	\caption{Artificial neural network model showing its free layers: inputs, hidden layer and output layer.~\cite{wiki_ann}}
 	\label{fig:ann_model}
+	\vspace*{-1em}
 \end{wrapfigure}
 
-They use learning algorithms that are inspired by understanding of how the brain learns, but they are evaluated by how well they work for practical applications such as speech recognition, object recognition, image retrieval and the ability to recommend products that a user will like.
-Despite being quite powerful when properly designed artificial neural networs are orders of magnitude less complex than human brains.
+Artificial neural networks use learning algorithms that are inspired by understanding of how the brain learns, but they are evaluated by how well they work for practical applications such as speech recognition, object recognition, image retrieval and the ability to recommend products that a user will like.
+Despite being quite powerful when properly designed, artificial neural networks are orders of magnitude less complex than human brains.
 As computers become more powerful, artificial neural networks are gradually taking over from simpler machine learning methods.
 They are already at the heart of a new generation of speech recognition devices and they are beginning to outperform earlier systems for recognizing objects in images.
 
